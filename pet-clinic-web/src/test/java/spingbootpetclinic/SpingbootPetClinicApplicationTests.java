@@ -1,4 +1,4 @@
-package drblu.springtraining.spingbootpetclinic;
+package spingbootpetclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
