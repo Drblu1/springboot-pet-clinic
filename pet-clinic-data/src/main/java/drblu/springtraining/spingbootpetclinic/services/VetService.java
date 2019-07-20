@@ -1,6 +1,5 @@
 package drblu.springtraining.spingbootpetclinic.services;
 
-import drblu.springtraining.spingbootpetclinic.model.Pet;
 import drblu.springtraining.spingbootpetclinic.model.Vet;
 
 import java.util.Set;
