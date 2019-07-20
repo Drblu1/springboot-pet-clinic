@@ -40,8 +40,8 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:Drblu1/springboot-pet-clinic.git</developerConnection>
-      <tag>spingboot-pet-clinic-0.0.1</tag>
+        <url>https://github.com/Drblu1/springboot-pet-clinic</url>
+        <connection>scm:git:https://github.com/Drblu1/springboot-pet-clinic.git</connection>
   </scm>
 
 </project>
