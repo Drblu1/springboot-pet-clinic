@@ -14,7 +14,7 @@
     </parent>
     <groupId>drblu.springtraining</groupId>
     <artifactId>spingboot-pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>spingboot-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
 
@@ -42,6 +42,7 @@
     <scm>
         <url>https://github.com/Drblu1/springboot-pet-clinic</url>
         <connection>scm:git:https://github.com/Drblu1/springboot-pet-clinic.git</connection>
+    <tag>spingboot-pet-clinic-0.0.1</tag>
   </scm>
 
 </project>
