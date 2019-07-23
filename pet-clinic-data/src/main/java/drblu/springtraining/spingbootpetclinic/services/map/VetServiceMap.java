@@ -1,12 +1,11 @@
 package drblu.springtraining.spingbootpetclinic.services.map;
 
-import drblu.springtraining.spingbootpetclinic.model.Pet;
 import drblu.springtraining.spingbootpetclinic.model.Vet;
-import drblu.springtraining.spingbootpetclinic.services.CrudService;
+import drblu.springtraining.spingbootpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Vet findById(Long id) {

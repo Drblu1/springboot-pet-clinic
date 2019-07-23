@@ -1,5 +1,7 @@
 package drblu.springtraining.spingbootpetclinic.services;
 
-public interface PetService extends CrudService {
+import drblu.springtraining.spingbootpetclinic.model.Pet;
+
+public interface PetService extends CrudService<Pet, Long> {
 
 }
