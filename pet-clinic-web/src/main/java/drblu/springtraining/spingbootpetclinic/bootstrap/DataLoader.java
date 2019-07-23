@@ -4,8 +4,6 @@ import drblu.springtraining.spingbootpetclinic.model.Owner;
 import drblu.springtraining.spingbootpetclinic.model.Vet;
 import drblu.springtraining.spingbootpetclinic.services.OwnerService;
 import drblu.springtraining.spingbootpetclinic.services.VetService;
-import drblu.springtraining.spingbootpetclinic.services.map.OwnerServiceMap;
-import drblu.springtraining.spingbootpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
