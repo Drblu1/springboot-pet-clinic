@@ -1,13 +1,13 @@
 package drblu.springtraining.spingbootpetclinic.services.map;
 
 import drblu.springtraining.spingbootpetclinic.model.Specialty;
-import drblu.springtraining.spingbootpetclinic.services.SpecialitiesServices;
+import drblu.springtraining.spingbootpetclinic.services.SpecialityService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialityMapServices  extends AbstractMapService<Specialty, Long> implements SpecialitiesServices {
+public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialityService {
     @Override
     public Specialty findById(Long id) {
         return super.findById(id);

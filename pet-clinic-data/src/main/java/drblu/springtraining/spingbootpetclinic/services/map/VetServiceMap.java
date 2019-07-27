@@ -1,6 +1,8 @@
 package drblu.springtraining.spingbootpetclinic.services.map;
 
+import drblu.springtraining.spingbootpetclinic.model.Specialty;
 import drblu.springtraining.spingbootpetclinic.model.Vet;
+import drblu.springtraining.spingbootpetclinic.services.SpecialityService;
 import drblu.springtraining.spingbootpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +10,12 @@ import java.util.Set;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
+    SpecialityService specialityService;
+
+    public VetServiceMap(SpecialityService specialityService) {
+        this.specialityService = specialityService;
+    }
 
     @Override
     public Vet findById(Long id) {
@@ -31,6 +39,15 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet entity) {
+
+        if(entity.getSpecialties().size() > 0) {
+            entity.getSpecialties().forEach(specialty -> {
+                if (specialty.getId() == null) {
+                    Specialty savedSpecialty = specialityService.save(specialty);
+                    specialty.setId(savedSpecialty.getId());
+                }
+            });
+        }
         return super.save(entity);
     }
 }
