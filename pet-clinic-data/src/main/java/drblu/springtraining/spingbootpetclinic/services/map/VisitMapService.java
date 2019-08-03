@@ -1,10 +1,12 @@
 package drblu.springtraining.spingbootpetclinic.services.map;
 
 import drblu.springtraining.spingbootpetclinic.model.Visit;
-import drblu.springtraining.spingbootpetclinic.services.springdatajpa.VisitService;
+import drblu.springtraining.spingbootpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override

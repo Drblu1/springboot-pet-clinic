@@ -1,4 +1,4 @@
-package drblu.springtraining.spingbootpetclinic.services.springdatajpa;
+package drblu.springtraining.spingbootpetclinic.services;
 
 import drblu.springtraining.spingbootpetclinic.model.Visit;
 import drblu.springtraining.spingbootpetclinic.services.CrudService;
