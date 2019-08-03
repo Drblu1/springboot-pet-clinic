@@ -1,0 +1,8 @@
+package drblu.springtraining.spingbootpetclinic.repositories;
+
+import drblu.springtraining.spingbootpetclinic.model.Owner;
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface OwnerRepository extends CrudRepository<Owner, Long> {
+}
