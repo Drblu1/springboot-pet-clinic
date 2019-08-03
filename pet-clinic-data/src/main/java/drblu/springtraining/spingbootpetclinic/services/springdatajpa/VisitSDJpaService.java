@@ -1,11 +1,13 @@
 package drblu.springtraining.spingbootpetclinic.services.springdatajpa;
 
+import drblu.springtraining.spingbootpetclinic.model.Vet;
 import drblu.springtraining.spingbootpetclinic.model.Visit;
 import drblu.springtraining.spingbootpetclinic.repositories.VisitRepository;
 import drblu.springtraining.spingbootpetclinic.services.VisitService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
@@ -25,7 +27,9 @@ public class VisitSDJpaService implements VisitService {
 
     @Override
     public Set<Visit> findAll() {
-        return (Set<Visit>) visitRepository.findAll();
+        Set<Visit> visits = new HashSet<>();
+        visitRepository.findAll().forEach(visits::add);
+        return visits;
     }
 
     @Override
