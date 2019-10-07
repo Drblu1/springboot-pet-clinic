@@ -8,6 +8,7 @@ import drblu.springtraining.spingbootpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -69,5 +70,10 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner findByLastName(String lastName) {
         return this.findAll().stream().filter(owner -> lastName.equals(owner.getLastName())).findFirst().orElseThrow(() ->new RuntimeException("No owner for this lastname" + lastName));
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastMane) {
+        return null;
     }
 }
